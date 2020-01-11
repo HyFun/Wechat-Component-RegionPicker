@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "region-picker":"/components/region-picker/region-picker"
+  }
+}

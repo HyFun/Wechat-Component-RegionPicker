@@ -1,0 +1,11 @@
+<!--pages/home/home.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  所在地区：{{userPlace}}
+</view>
+
+<view class="button">
+  <button type="primary" style="width:100%;" bindtap="clickOpenRegionpicker">打开region-picker</button>
+</view>
+
+
+<region-picker></region-picker>

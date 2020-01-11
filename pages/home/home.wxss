@@ -1,0 +1,5 @@
+/* pages/home/home.wxss */
+
+.button{
+    padding: 20px;
+}
