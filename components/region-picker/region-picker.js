@@ -12,6 +12,12 @@ Component({
   },
   methods: {
     // 这里是一个自定义方法
-    customMethod: function () { }
+    customMethod: function () { },
+
+
+    onMaskTouchMove:function(e){
+      e.de
+      console.log(e)
+    }
   }
 })

@@ -1,4 +1,6 @@
 <!--components/region-picker/region-picker.wxml-->
-<view class="">
-    
+<view class="region_picker" catchtouchmove="onMaskTouchMove" >
+    <view class="region_container">
+
+    </view>
 </view>
