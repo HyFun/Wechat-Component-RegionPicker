@@ -25,6 +25,7 @@
 /* components/region-picker/region-picker.wxss */
 .region_picker,.region_picker view{
     box-sizing: border-box;
+    color: #434343;
 }
 
 
@@ -72,6 +73,7 @@
 
 .region_picker_title{
     font-size: 18px;
+    color: #000000;
     position: relative;
     text-align: center;
     padding: 5px 0;
@@ -86,7 +88,7 @@
     height: 24px;
     background-color: #F0f0f0;
     border-radius: 50%;
-    color: #747474;
+    color: #cccccc;
     line-height: 24px;
 }
 
@@ -109,6 +111,7 @@
 
 
 .region_picker_tab_item{
+    position: relative;
     display: inline-block;
     padding: 10px;
     font-size: 16px;
@@ -117,12 +120,19 @@
     white-space: nowrap;/*规定段落中的文本不进行换行 */
 }
 
-.region_picker_tab_item.hidden{
-    display: none;
+.region_picker_tab_item:last-child{
+    color: #000000;
 }
 
-.region_picker_tab_item:last-child{
-    border-bottom: 2px solid #07c160;
+.region_picker_tab_item:last-child::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: #07c160;
 }
 
 .region_picker_content{
