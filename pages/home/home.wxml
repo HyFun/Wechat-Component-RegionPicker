@@ -7,7 +7,8 @@
   <button type="primary" style="width:100%;" bindtap="clickOpenRegionpicker">打开region-picker</button>
 </view>
 
-<view style="height:1000px;background:red;"></view>
+<!-- <view style="height:1000px;background:red;"></view> -->
 
 
-<region-picker></region-picker>
+<region-picker region-show='{{regionShow}}' bind:region-event-show="regionShowChange"
+ region-datas="{{citys}}" bind:region-event-confirm="onRegionConfirm"></region-picker>

@@ -1,11 +1,17 @@
 // pages/home/home.js
+import city from '../../utils/city.js';
+
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userPlace:''
+    userPlace: '',
+    regionShow: false,
+    citys: city
   },
 
   /**
@@ -69,7 +75,35 @@ Page({
    * 点击打开region-picker
    * @param {*} e 
    */
-  clickOpenRegionpicker:function(e){
+  clickOpenRegionpicker: function (e) {
+    this.setData({
+      regionShow: true
+    });
+  },
+  /**
+  * region显示隐藏事件
+  */
+  regionShowChange: function (e) {
+    let show = e.detail.show;
+    this.setData({
+      regionShow: show
+    });
+  },
+
+  /**
+   * 当点击确定时的回调
+   * @param {*} e 
+   */
+  onRegionConfirm: function (e) {
+    console.log(e)
+    let selectArray = e.detail.select;
+    let list = [];
+    for (let i = 0; i < selectArray.length; i++) {
+      list.push(selectArray[i].name)
+    }
+    this.setData({
+      userPlace:list.join('-')
+    });
 
   }
 })
